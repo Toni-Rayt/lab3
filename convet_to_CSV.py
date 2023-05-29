@@ -9,7 +9,7 @@ conn = psycopg2.connect(host='192.168.122.62', port='5432', dbname='lab02', user
 cursor = conn.cursor()
 
 # Путь к каталогу, содержащему файлы
-files_directory = '/home/tini/lab03/academic.udayton.edu/kissock/http/Weather/gsod95-current'
+files_directory = '/home/tini/Загрузки/filippov/lab03/'
 files_directory_saves = '/home/tini/MyPython/import/output'
 
 # Получение списка файлов в каталоге
