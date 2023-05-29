@@ -19,7 +19,7 @@ BEGIN
     )
   LOOP
     -- Создаем внешнюю таблицу с именем, соответствующим имени файла без расширения
-    EXECUTE format('CREATE FOREIGN TABLE external.%I (mounth INTEGER, day INTEGER, year INTEGER, temperature DOUBLE PRECISION) SERVER file_server OPTIONS (filename ''/home/postgres/data/lab02/output/%s'', format ''csv'')',
+    EXECUTE format('CREATE FOREIGN TABLE external.%I (mounth INTEGER, day INTEGER, year INTEGER, temperature DOUBLE PRECISION) SERVER file_server OPTIONS (filename ''/home/postgres/data/lab03/output/%s'', format ''csv'')',
                    substring(file_name FROM 1 FOR position('.' IN file_name) - 1),
                    file_name
     );
